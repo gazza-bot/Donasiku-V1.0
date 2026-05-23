@@ -1,427 +1,279 @@
 // =========================
 // GET DATA FROM LOCAL STORAGE
 // =========================
-const campaignImage =
-    localStorage.getItem("campaignImage");
+const campaignImage = localStorage.getItem("campaignImage");
 
-const campaignTitle =
-    localStorage.getItem("campaignTitle");
+const campaignTitle = localStorage.getItem("campaignTitle");
 
-const campaignCategory =
-    localStorage.getItem("campaignCategory");
+const campaignCategory = localStorage.getItem("campaignCategory");
 
-const campaignCategoryClass =
-    localStorage.getItem(
-        "campaignCategoryClass"
-    );
+const campaignCategoryClass = localStorage.getItem("campaignCategoryClass");
 
-const campaignProgress =
-    localStorage.getItem("campaignProgress");
+const campaignProgress = localStorage.getItem("campaignProgress");
+const campaignProgressColor = localStorage.getItem("campaignProgressColor");
 
-const campaignCollected =
-    localStorage.getItem("campaignCollected");
-
+const campaignCollected = localStorage.getItem("campaignCollected");
 
 // =========================
 // SET DATA TO PAYMENT PAGE
 // =========================
-const paymentImage =
-    document.getElementById("paymentImage");
+const paymentImage = document.getElementById("paymentImage");
 
-const paymentTitle =
-    document.getElementById("paymentTitle");
+const paymentTitle = document.getElementById("paymentTitle");
 
-const paymentCategoryEl =
-    document.getElementById("paymentCategory");
+const paymentCategoryEl = document.getElementById("paymentCategory");
 
-const paymentCollectedEl =
-    document.getElementById("paymentCollected");
+const paymentCollectedEl = document.getElementById("paymentCollected");
 
-const paymentProgressEl =
-    document.getElementById("paymentProgress");
-
+const paymentProgressEl = document.getElementById("paymentProgress");
 
 // =========================
 // IMAGE
 // =========================
 if (paymentImage && campaignImage) {
-
-    paymentImage.src =
-        campaignImage;
-
+  paymentImage.src = campaignImage;
 }
-
 
 // =========================
 // TITLE
 // =========================
 if (paymentTitle && campaignTitle) {
-
-    paymentTitle.innerText =
-        campaignTitle;
-
+  paymentTitle.innerText = campaignTitle;
 }
-
 
 // =========================
 // CATEGORY
 // =========================
 if (paymentCategoryEl && campaignCategory) {
+  paymentCategoryEl.innerText = campaignCategory;
 
-    paymentCategoryEl.innerText =
-        campaignCategory;
-
-    // set warna badge
-    if (campaignCategoryClass) {
-
-        paymentCategoryEl.className =
-            campaignCategoryClass;
-
-    }
-
+  // set warna badge
+  if (campaignCategoryClass) {
+    paymentCategoryEl.className = campaignCategoryClass;
+  }
 }
-
 
 // =========================
 // COLLECTED
 // =========================
 if (paymentCollectedEl && campaignCollected) {
-
-    paymentCollectedEl.innerText =
-        campaignCollected;
-
+  paymentCollectedEl.innerText = campaignCollected;
 }
-
 
 // =========================
 // PROGRESS
 // =========================
 if (paymentProgressEl && campaignProgress) {
+  paymentProgressEl.style.width = campaignProgress;
+  paymentProgressEl.className = campaignProgressColor;
 
-    paymentProgressEl.style.width =
-        campaignProgress;
-
-    console.log("Progress Ditemukan : " + campaignProgress)
-
+  console.log("Progress Ditemukan : " + campaignProgress);
+  console.log("Progress Ditemukan : " + campaignProgressColor);
 }
-
 
 // =========================
 // PAYMENT METHOD
 // =========================
-const paymentMethods =
-    document.querySelectorAll(".payment-method");
+const paymentMethods = document.querySelectorAll(".payment-method");
 
-paymentMethods.forEach(method => {
-
-    method.addEventListener("click", () => {
-
-        paymentMethods.forEach(item => {
-
-            item.classList.remove("active");
-
-        });
-
-        method.classList.add("active");
-
+paymentMethods.forEach((method) => {
+  method.addEventListener("click", () => {
+    paymentMethods.forEach((item) => {
+      item.classList.remove("active");
     });
 
+    method.classList.add("active");
+  });
 });
-
 
 // =========================
 // QUICK BUTTON DONATION
 // =========================
-const quickButtons =
-    document.querySelectorAll(".quick-btn");
+const quickButtons = document.querySelectorAll(".quick-btn");
 
-const paymentInput =
-    document.getElementById("paymentInput");
+const paymentInput = document.getElementById("paymentInput");
 
-quickButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        quickButtons.forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-        button.classList.add("active");
-
-        const amount =
-            button.dataset.amount;
-
-        paymentInput.value =
-            amount;
-
-        updatePayment();
-
+quickButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    quickButtons.forEach((btn) => {
+      btn.classList.remove("active");
     });
 
-});
+    button.classList.add("active");
 
+    const amount = button.dataset.amount;
+
+    paymentInput.value = amount;
+
+    updatePayment();
+  });
+});
 
 // =========================
 // SUMMARY
 // =========================
-const summaryNominal =
-    document.getElementById("summaryNominal");
+const summaryNominal = document.getElementById("summaryNominal");
 
-const summaryTotal =
-    document.getElementById("summaryTotal");
-
+const summaryTotal = document.getElementById("summaryTotal");
 
 // =========================
 // INPUT EVENT
 // =========================
 if (paymentInput) {
-
-    paymentInput.addEventListener(
-        "input",
-        updatePayment
-    );
-
+  paymentInput.addEventListener("input", updatePayment);
 }
-
 
 // =========================
 // UPDATE PAYMENT
 // =========================
 function updatePayment() {
+  let amount = parseInt(paymentInput.value) || 0;
 
-    let amount =
-        parseInt(paymentInput.value) || 0;
+  let admin = 1000;
 
-    let admin = 1000;
+  let total = amount + admin;
 
-    let total =
-        amount + admin;
+  if (summaryNominal) {
+    summaryNominal.innerText = "Rp " + amount.toLocaleString("id-ID");
+  }
 
-    if (summaryNominal) {
-
-        summaryNominal.innerText =
-            "Rp " +
-            amount.toLocaleString("id-ID");
-
-    }
-
-    if (summaryTotal) {
-
-        summaryTotal.innerText =
-            "Rp " +
-            total.toLocaleString("id-ID");
-
-    }
-
+  if (summaryTotal) {
+    summaryTotal.innerText = "Rp " + total.toLocaleString("id-ID");
+  }
 }
-
 
 // =========================
 // PAY BUTTON
 // =========================
-const payButton =
-    document.querySelector(".pay-btn");
+const payButton = document.querySelector(".pay-btn");
 
 if (payButton) {
+  payButton.addEventListener("click", () => {
+    const amount = parseInt(paymentInput.value);
 
-    payButton.addEventListener("click", () => {
+    // validation
+    if (!amount || amount <= 0) {
+      alert("Masukkan nominal donasi!");
 
-        const amount =
-            parseInt(paymentInput.value);
+      return;
+    }
 
-        // validation
-        if (!amount || amount <= 0) {
+    // active payment method
+    const activeMethod = document.querySelector(".payment-method.active");
 
-            alert(
-                "Masukkan nominal donasi!"
-            );
+    let methodName = "Belum dipilih";
 
-            return;
+    if (activeMethod) {
+      methodName = activeMethod.innerText.trim();
+    }
 
-        }
-
-        // active payment method
-        const activeMethod =
-            document.querySelector(
-                ".payment-method.active"
-            );
-
-        let methodName =
-            "Belum dipilih";
-
-        if (activeMethod) {
-
-            methodName =
-                activeMethod.innerText.trim();
-
-        }
-
-        // success alert
-        alert(
-            "Pembayaran berhasil 🎉\n\n" +
-            "Campaign : " +
-            campaignTitle +
-            "\n" +
-            "Nominal : Rp " +
-            amount.toLocaleString("id-ID") +
-            "\n" +
-            "Metode : " +
-            methodName
-        );
-
-    });
-
+    // success alert
+    alert(
+      "Pembayaran berhasil 🎉\n\n" +
+        "Campaign : " +
+        campaignTitle +
+        "\n" +
+        "Nominal : Rp " +
+        amount.toLocaleString("id-ID") +
+        "\n" +
+        "Metode : " +
+        methodName,
+    );
+  });
 }
-
 
 // =========================
 // DONATE BUTTON
 // =========================
-const donateButtons =
-    document.querySelectorAll(".donate-btn");
+const donateButtons = document.querySelectorAll(".donate-btn");
 
-donateButtons.forEach(button => {
+donateButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // get card
+    const card = button.closest(".campaign-link");
 
-    button.addEventListener("click", () => {
+    if (!card) return;
 
-        // get card
-        const card =
-            button.closest(".campaign-link");
+    // =========================
+    // IMAGE
+    // =========================
+    const image = card.querySelector("img").src;
 
-        if (!card) return;
+    // =========================
+    // TITLE
+    // =========================
+    let title = "";
 
-        // =========================
-        // IMAGE
-        // =========================
-        const image =
-            card.querySelector("img").src;
+    if (card.querySelector("h2")) {
+      title = card.querySelector("h2").innerText;
+    } else if (card.querySelector("h3")) {
+      title = card.querySelector("h3").innerText;
+    }
 
-        // =========================
-        // TITLE
-        // =========================
-        let title = "";
+    // =========================
+    // CATEGORY
+    // =========================
+    let category = "";
+    let categoryClass = "";
 
-        if (card.querySelector("h2")) {
+    if (card.querySelector(".hero-badge")) {
+      const badge = card.querySelector(".hero-badge");
 
-            title =
-                card.querySelector("h2").innerText;
+      category = badge.innerText;
 
-        } else if (card.querySelector("h3")) {
+      // ambil warna badge
+      categoryClass = badge.className;
+    } else if (card.querySelector(".card-badge")) {
+      const badge = card.querySelector(".card-badge");
 
-            title =
-                card.querySelector("h3").innerText;
+      category = badge.innerText;
 
-        }
+      // ambil warna badge
+      categoryClass = badge.className;
+    }
 
-        // =========================
-        // CATEGORY
-        // =========================
-        let category = "";
-        let categoryClass = "";
+    // =========================
+    // PROGRESS
+    // =========================
+    let progress = "0%";
+    let progressColor = "";
 
-        if (card.querySelector(".hero-badge")) {
+    if (card.querySelector(".progress")) {
+      progressColor = card.querySelector(".progress").className;
 
-            const badge =
-                card.querySelector(".hero-badge");
+      progress = card.querySelector(".progress").style.width;
+    }
 
-            category =
-                badge.innerText;
+    // =========================
+    // COLLECTED
+    // =========================
+    let collected = "";
 
-            // ambil warna badge
-            categoryClass =
-                badge.className;
+    if (card.querySelector(".hero-amount h3")) {
+      collected = card.querySelector(".hero-amount h3").innerText;
+    } else if (card.querySelector(".card-amount h4")) {
+      collected = card.querySelector(".card-amount h4").innerText;
+    }
 
-        } else if (
-            card.querySelector(".card-badge")
-        ) {
+    // =========================
+    // SAVE TO LOCAL STORAGE
+    // =========================
+    localStorage.setItem("campaignImage", image);
 
-            const badge =
-                card.querySelector(".card-badge");
+    localStorage.setItem("campaignTitle", title);
 
-            category =
-                badge.innerText;
+    localStorage.setItem("campaignCategory", category);
 
-            // ambil warna badge
-            categoryClass =
-                badge.className;
+    localStorage.setItem("campaignCategoryClass", categoryClass);
 
-        }
+    localStorage.setItem("campaignProgress", progress);
+    localStorage.setItem("campaignProgressColor", progressColor);
 
-        // =========================
-        // PROGRESS
-        // =========================
-        let progress = "0%";
+    localStorage.setItem("campaignCollected", collected);
 
-        if (card.querySelector(".progress")) {
-
-            progress =
-                card.querySelector(".progress")
-                .style.width;
-
-        }
-
-        // =========================
-        // COLLECTED
-        // =========================
-        let collected = "";
-
-        if (card.querySelector(".hero-amount h3")) {
-
-            collected =
-                card.querySelector(".hero-amount h3")
-                .innerText;
-
-        } else if (
-            card.querySelector(".card-amount h4")
-        ) {
-
-            collected =
-                card.querySelector(".card-amount h4")
-                .innerText;
-
-        }
-
-        // =========================
-        // SAVE TO LOCAL STORAGE
-        // =========================
-        localStorage.setItem(
-            "campaignImage",
-            image
-        );
-
-        localStorage.setItem(
-            "campaignTitle",
-            title
-        );
-
-        localStorage.setItem(
-            "campaignCategory",
-            category
-        );
-
-        localStorage.setItem(
-            "campaignCategoryClass",
-            categoryClass
-        );
-
-        localStorage.setItem(
-            "campaignProgress",
-            progress
-        );
-
-        localStorage.setItem(
-            "campaignCollected",
-            collected
-        );
-
-        // =========================
-        // REDIRECT
-        // =========================
-        window.location.href =
-            "payment.html";
-
-    });
-
+    // =========================
+    // REDIRECT
+    // =========================
+    window.location.href = "payment.html";
+  });
 });
