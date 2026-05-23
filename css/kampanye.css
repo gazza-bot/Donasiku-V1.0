@@ -325,6 +325,20 @@ a {
     background: #f0e9ff;
     color: #7c4dff;
 }
+.green-badge {
+    background: #a9dcbb;
+    color: #095525;
+}
+
+.orange-badge {
+    background: #ffedcf;
+    color: #F59E0B;
+}
+
+.brown-badge {
+    background: #FFF3ED;
+    color: #6B3F2A;
+}
 
 .campaign-card h3 {
     font-size: 18px;
