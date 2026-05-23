@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* button hijau*/
+.btn-primary:hover,
+.btn-login:hover,
+.btn-reset:hover,
+.donate-btn:hover {
+    background: #14853d;
+}
+
+/* button putih */
+.btn-outline:hover,
+.detail-btn:hover {
+    background: #f5f5f5;
+    color: #19a34a;
+    border-color: #19a34a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* navbar */
+.navbar {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 70px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 52px;
+}
+
+.logo h2 {
+    color: #0A554C;
+    font-size: 18px;
+}
+
+.logo span {
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #555;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #19a34a;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box input {
+    width: 500px;
+    padding: 12px 40px 12px 18px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    outline: none;
+}
+
+.search-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-outline {
+    padding: 10px 30px;
+    border: 1px solid #19a34a;
+    border-radius: 10px;
+    background: #fff;
+    color: #19a34a;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #19a34a;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}

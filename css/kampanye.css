@@ -1,0 +1,393 @@
+a {
+    text-decoration: none;
+}
+
+/* campaign page */
+.campaign-page {
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 6px;
+}
+
+/* page title */
+.page-title {
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    font-size: 42px;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.page-title p {
+    color: #777;
+    font-size: 15px;
+}
+
+/* category filter */
+.category-filter {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.category-btn {
+    height: 46px;
+    padding: 0 22px;
+    border-radius: 14px;
+    border: 1.5px solid #222;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.category-btn:hover {
+    background: #19a34a;
+    color: #fff;
+    border-color: #19a34a;
+}
+
+.category-btn.active {
+    background: #15803d;
+    color: #fff;
+    border-color: #15803d;
+}
+
+/* hero campaign */
+.hero-campaign {
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid #e9e9e9;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-badge {
+    width: max-content;
+    background: #ffe8e8;
+    color: #ff3b30;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-badge-blue {
+    width: max-content;
+    background: #BFD0E8;
+    color: #2E6AE5;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-badge-orange {
+    width: max-content;
+    background: #ffedcf;
+    color: #F59E0B;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-badge-brown {
+    width: max-content;
+    background: #FFF3ED;
+    color: #6B3F2A;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-badge-purple {
+    width: max-content;
+    background: #F8C5F3;
+    color: #90009E;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-badge-green {
+    width: max-content;
+    background: #a9dcbb;
+    color: #095525;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    color: #111;
+}
+
+.hero-content p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.hero-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hero-amount h3 {
+    font-size: 24px;
+    color: #222;
+}
+
+.hero-amount h3 span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #777;
+}
+
+.hero-amount strong {
+    font-size: 20px;
+}
+
+/* progress */
+.progress-bar {
+    width: 100%;
+    height: 7px;
+    background: #e8e8e8;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.red-progress {
+    background: #EB0000;
+}
+
+.blue-progress {
+    background: #2E6AE5;
+}
+
+.orange-progress {
+    background: #ff9800;
+}
+
+.purple-progress {
+    background: #7c4dff;
+}
+
+.green-progress {
+    background: #095525;
+}
+
+.brown-progress {
+    background: #6B3F2A;
+}
+
+.target-text {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* button */
+.donate-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 14px;
+    background: #19a34a;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.donate-btn:hover {
+    background: #15803d;
+}
+
+.detail-btn {
+    width: 100%;
+    height: 46px;
+    border-radius: 14px;
+    border: 1.5px solid #19a34a;
+    background: #fff;
+    color: #15803d;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+.detail-btn:hover {
+    background: #19a34a;
+    color: #fff;
+}
+
+/* grid */
+.campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    padding-bottom: 30px;
+}
+
+/* card */
+.campaign-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #e9e9e9;
+    padding: 14px;
+    transition: .3s;
+}
+
+.campaign-card:hover {
+    transform: translateY(-4px);
+}
+
+.campaign-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+.card-badge {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.blue-badge {
+    background: #e5ecff;
+    color: #3b6cff;
+}
+
+.red-badge {
+    background: #ffe8e8;
+    color: #ff0000;
+}
+
+.yellow-badge {
+    background: #fff2df;
+    color: #ff9800;
+}
+
+.purple-badge {
+    background: #f0e9ff;
+    color: #7c4dff;
+}
+
+.campaign-card h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.card-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-amount h4 {
+    font-size: 16px;
+    color: #222;
+}
+
+.card-amount h4 span {
+    font-weight: 400;
+    color: #777;
+}
+
+.card-amount strong {
+    font-size: 18px;
+    color: #444;
+}
+
+/* responsive */
+@media(max-width:1400px) {
+    .campaign-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width:1100px) {
+    .campaign-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-campaign {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .campaign-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+}

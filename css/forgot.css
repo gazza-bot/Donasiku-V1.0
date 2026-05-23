@@ -1,0 +1,181 @@
+/* login card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* welcome */
+.welcome {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.welcome h1 {
+  font-size: 40px;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* form */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* input */
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  border-color: #18a34a;
+  box-shadow: 0 0 0 3px rgba(24, 163, 74, 0.1);
+}
+
+/* toggle password */
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* login page */
+.form-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remember input {
+  accent-color: #18a34a;
+}
+
+.forgot {
+  color: #18a34a;
+  text-decoration: none;
+}
+
+.forgot:hover,
+.forgot:hover {
+  color: #14853d;
+}
+
+/* button */
+.btn-login,
+.btn-reset {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #18a34a;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.btn-login:hover,
+.btn-reset:hover {
+  background: #14853d;
+}
+
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+/* otp header */
+.otp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.otp-header p {
+  font-size: 11px;
+  color: #999;
+}
+
+.otp-header label {
+  margin-top: 10px;
+}
+
+.otp-header a {
+  color: #18a34a;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  top: -20px;
+}
+
+/* signup */
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.signup span {
+  color: #999;
+}
+
+.signup a {
+  color: #18a34a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup a:hover,
+.singup a:hover {
+  color: #14853d;
+}
+

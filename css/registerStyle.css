@@ -1,0 +1,247 @@
+/* login card */
+.login-card,
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* welcome */
+.welcome,
+.register-text {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.welcome h1,
+.register-text h1 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* register wrapper */
+.register-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transform: scale(0.72);
+  transform-origin: center;
+}
+
+/* form */
+.form-group,
+.input-group {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.form-group label,
+.input-group label {
+  display: block;
+  margin-bottom: 4px;
+  color: #444;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* input */
+.input-box {
+  position: relative;
+}
+
+.input-box input,
+.input-group input {
+  width: 100%;
+  height: 42px;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.input-box input:focus,
+.input-group input:focus {
+  border-color: #18a34a;
+  box-shadow: 0 0 0 3px rgba(24, 163, 74, 0.1);
+}
+
+/* toggle password */
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* form extra */
+.form-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remember input {
+  accent-color: #18a34a;
+}
+
+.forgot {
+  color: #18a34a;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  color: #14853d;
+}
+
+/* extra */
+.form-extra-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-bottom: 0.6rem;
+  font-size: 12px;
+}
+
+.agreement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  text-align: left;
+  width: 100%;
+}
+
+.agreement input {
+  accent-color: #18a34a;
+  margin-top: 3px;
+}
+
+.agreeText {
+  text-align: left;
+  color: #333;
+  line-height: 1.4;
+}
+
+.terms-condition {
+  color: #2D81F7;
+  text-decoration: none;
+}
+
+.terms-condition:hover {
+  text-decoration: underline;
+}
+
+/* button */
+.btn-login,
+.btn-reset,
+.btn-register {
+  width: 100%;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background: #18a34a;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 4px;
+  margin-bottom: 18px;
+}
+
+.btn-login:hover,
+.btn-reset:hover,
+.btn-register:hover {
+  background: #14853d;
+}
+
+/* divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+/* otp header */
+.otp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.otp-header p {
+  font-size: 11px;
+  color: #999;
+}
+
+.otp-header label {
+  margin-top: 10px;
+}
+
+.otp-header a {
+  color: #18a34a;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  top: -20px;
+}
+
+/* bottom text */
+.bottom-text,
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.signup span {
+  color: #999;
+}
+
+.signup a,
+.bottom-text a {
+  color: #18a34a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup a:hover,
+.bottom-text a:hover {
+  color: #14853d;
+}
+
