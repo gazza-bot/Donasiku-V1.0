@@ -83,12 +83,14 @@ body {
 .main {
     margin-left: 280px;
     width: calc(100% - 280px);
-    min-height: 100vh;
+    height: 100vh;
     padding: 24px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 /* topbar */
