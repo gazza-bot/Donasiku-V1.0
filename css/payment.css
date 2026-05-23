@@ -75,6 +75,12 @@ body {
     margin-bottom: 14px;
 }
 
+.campaign-detail-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
 .payment-campaign-info h3 {
     font-size: 28px;
 
