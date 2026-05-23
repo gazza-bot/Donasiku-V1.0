@@ -1,81 +1,54 @@
-// =========================
-// GET DATA FROM LOCAL STORAGE
-// =========================
+//get data local storage
 const campaignImage = localStorage.getItem("campaignImage");
-
 const campaignTitle = localStorage.getItem("campaignTitle");
-
 const campaignCategory = localStorage.getItem("campaignCategory");
-
 const campaignCategoryClass = localStorage.getItem("campaignCategoryClass");
-
 const campaignProgress = localStorage.getItem("campaignProgress");
 const campaignProgressColor = localStorage.getItem("campaignProgressColor");
-
 const campaignCollected = localStorage.getItem("campaignCollected");
 
-// =========================
-// SET DATA TO PAYMENT PAGE
-// =========================
+//set data 
 const paymentImage = document.getElementById("paymentImage");
-
 const paymentTitle = document.getElementById("paymentTitle");
-
 const paymentCategoryEl = document.getElementById("paymentCategory");
-
 const paymentCollectedEl = document.getElementById("paymentCollected");
-
 const paymentProgressEl = document.getElementById("paymentProgress");
 
-// =========================
-// IMAGE
-// =========================
+//image
 if (paymentImage && campaignImage) {
   paymentImage.src = campaignImage;
 }
 
-// =========================
-// TITLE
-// =========================
+//title
 if (paymentTitle && campaignTitle) {
   paymentTitle.innerText = campaignTitle;
 }
 
-// =========================
-// CATEGORY
-// =========================
+//category
 if (paymentCategoryEl && campaignCategory) {
   paymentCategoryEl.innerText = campaignCategory;
 
-  // set warna badge
+//set warna badge
   if (campaignCategoryClass) {
     paymentCategoryEl.className = campaignCategoryClass;
   }
 }
 
-// =========================
-// COLLECTED
-// =========================
+//collected
 if (paymentCollectedEl && campaignCollected) {
   paymentCollectedEl.innerText = campaignCollected;
 }
 
-// =========================
-// PROGRESS
-// =========================
+//progress
 if (paymentProgressEl && campaignProgress) {
   paymentProgressEl.style.width = campaignProgress;
   paymentProgressEl.className = campaignProgressColor;
-
   console.log("Progress Ditemukan : " + campaignProgress);
   console.log("Progress Ditemukan : " + campaignProgressColor);
 }
 
-// =========================
-// PAYMENT METHOD
-// =========================
+//payment method
 const paymentMethods = document.querySelectorAll(".payment-method");
-
 paymentMethods.forEach((method) => {
   method.addEventListener("click", () => {
     paymentMethods.forEach((item) => {
@@ -86,13 +59,9 @@ paymentMethods.forEach((method) => {
   });
 });
 
-// =========================
-// QUICK BUTTON DONATION
-// =========================
+//quick button
 const quickButtons = document.querySelectorAll(".quick-btn");
-
 const paymentInput = document.getElementById("paymentInput");
-
 quickButtons.forEach((button) => {
   button.addEventListener("click", () => {
     quickButtons.forEach((btn) => {
@@ -100,18 +69,13 @@ quickButtons.forEach((button) => {
     });
 
     button.classList.add("active");
-
     const amount = button.dataset.amount;
-
     paymentInput.value = amount;
-
     updatePayment();
   });
 });
 
-// =========================
-// SUMMARY
-// =========================
+//summary
 const summaryNominal = document.getElementById("summaryNominal");
 
 const summaryTotal = document.getElementById("summaryTotal");
@@ -123,30 +87,21 @@ if (paymentInput) {
   paymentInput.addEventListener("input", updatePayment);
 }
 
-// =========================
-// UPDATE PAYMENT
-// =========================
+//update payment
 function updatePayment() {
   let amount = parseInt(paymentInput.value) || 0;
-
   let admin = 1000;
-
   let total = amount + admin;
-
   if (summaryNominal) {
     summaryNominal.innerText = "Rp " + amount.toLocaleString("id-ID");
   }
-
   if (summaryTotal) {
     summaryTotal.innerText = "Rp " + total.toLocaleString("id-ID");
   }
 }
 
-// =========================
-// PAY BUTTON
-// =========================
+//paybutton
 const payButton = document.querySelector(".pay-btn");
-
 if (payButton) {
   payButton.addEventListener("click", () => {
     const amount = parseInt(paymentInput.value);
@@ -154,15 +109,12 @@ if (payButton) {
     // validation
     if (!amount || amount <= 0) {
       alert("Masukkan nominal donasi!");
-
       return;
     }
 
     // active payment method
     const activeMethod = document.querySelector(".payment-method.active");
-
     let methodName = "Belum dipilih";
-
     if (activeMethod) {
       methodName = activeMethod.innerText.trim();
     }
@@ -182,37 +134,28 @@ if (payButton) {
   });
 }
 
-// =========================
-// DONATE BUTTON
-// =========================
+//donate button
 const donateButtons = document.querySelectorAll(".donate-btn");
-
 donateButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    
     // get card
     const card = button.closest(".campaign-link");
 
     if (!card) return;
 
-    // =========================
-    // IMAGE
-    // =========================
+    //image
     const image = card.querySelector("img").src;
 
-    // =========================
-    // TITLE
-    // =========================
+    //title
     let title = "";
-
     if (card.querySelector("h2")) {
       title = card.querySelector("h2").innerText;
     } else if (card.querySelector("h3")) {
       title = card.querySelector("h3").innerText;
     }
 
-    // =========================
-    // CATEGORY
-    // =========================
+    //category
     let category = "";
     let categoryClass = "";
 
@@ -232,48 +175,32 @@ donateButtons.forEach((button) => {
       categoryClass = badge.className;
     }
 
-    // =========================
-    // PROGRESS
-    // =========================
+    //progress
     let progress = "0%";
     let progressColor = "";
-
     if (card.querySelector(".progress")) {
       progressColor = card.querySelector(".progress").className;
-
       progress = card.querySelector(".progress").style.width;
     }
 
-    // =========================
-    // COLLECTED
-    // =========================
+    //collected
     let collected = "";
-
     if (card.querySelector(".hero-amount h3")) {
       collected = card.querySelector(".hero-amount h3").innerText;
     } else if (card.querySelector(".card-amount h4")) {
       collected = card.querySelector(".card-amount h4").innerText;
     }
 
-    // =========================
-    // SAVE TO LOCAL STORAGE
-    // =========================
+    //save to local storage
     localStorage.setItem("campaignImage", image);
-
     localStorage.setItem("campaignTitle", title);
-
     localStorage.setItem("campaignCategory", category);
-
     localStorage.setItem("campaignCategoryClass", categoryClass);
-
     localStorage.setItem("campaignProgress", progress);
     localStorage.setItem("campaignProgressColor", progressColor);
-
     localStorage.setItem("campaignCollected", collected);
 
-    // =========================
-    // REDIRECT
-    // =========================
+    //redirect
     window.location.href = "payment.html";
   });
 });
