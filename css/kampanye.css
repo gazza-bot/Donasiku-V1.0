@@ -8,6 +8,12 @@ a {
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 6px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.campaign-page::-webkit-scrollbar {
+    display: none;
 }
 
 /* page title */
@@ -316,7 +322,7 @@ a {
     color: #ff0000;
 }
 
-.yellow-badge {
+.orange-badge {
     background: #fff2df;
     color: #ff9800;
 }
@@ -324,20 +330,6 @@ a {
 .purple-badge {
     background: #f0e9ff;
     color: #7c4dff;
-}
-.green-badge {
-    background: #a9dcbb;
-    color: #095525;
-}
-
-.orange-badge {
-    background: #ffedcf;
-    color: #F59E0B;
-}
-
-.brown-badge {
-    background: #FFF3ED;
-    color: #6B3F2A;
 }
 
 .campaign-card h3 {
