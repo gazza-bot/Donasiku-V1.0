@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/program.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+                <h2>Donasiku</h2>
+            </div>
+
+            <!-- MENU -->
+            <div class="menu-wrapper">
+                <h4>JELAJAHI</h4>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Beranda</span>
+                </a>
+                <a href="kampanye.html">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Kampanye</span>
+                </a>
+                <a href="program.html" class="active">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Program</span>
+                </a>
+            </div>
+
+            <!-- DONASI -->
+            <div class="menu-wrapper">
+                <h4>DONASI SAYA</h4>
+                <a href="donasisaya.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Donasi Saya</span>
+                </a>
+            </div>
+
+            <!-- TRANSPARANSI -->
+            <div class="menu-wrapper">
+                <h4>TRANSPARANSI</h4>
+                <a href="report.html">
+                    <i class="fa-regular fa-rectangle-list"></i>
+                    <span>Laporan</span>
+                </a>
+            </div>
+
+            <!-- TENTANG -->
+            <div class="menu-wrapper">
+                <h4>TENTANG KAMI</h4>
+                <a href="aboutafter.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Tentang Kami</span>
+                </a>
+                <a href="setting.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" id="openLogout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+        <main class="main">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+
+                <!-- SEARCH -->
+                <div class="search-box">
+                    <input type="text" placeholder="Cari kampanye, program, atau berita">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="topbar-right">
+
+                    <!-- NOTIF -->
+                    <div class="notif">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+
+                    <!-- PROFILE -->
+                    <div class="profile">
+                        <img src="img/Profile.png" alt="Profile">
+                        <div class="profile-text">
+                            <h3>Halo, Mahi</h3>
+                            <p>
+                                Terima kasih sudah berbagi!
+                            </p>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <!-- TITLE -->
+                <div class="page-title">
+                    <h1>Kategori Program</h1>
+                    <p>
+                        Lihat semua kategori program yang sudah menyediakan
+                        berbagai macam kampanye sesuai kategori
+                    </p>
+                </div>
+
+                <!-- PROGRAM GRID -->
+                <div class="program-grid">
+
+                    <!-- CARD 1 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="img/pendidikan.png" alt="Pendidikan">
+                        </div>
+                        <div class="program-info">
+                            <div class="program-top">
+                                <div class="program-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <h3>Pendidikan</h3>
+                            </div>
+                            <p>
+                                Mendukung pendidikan yang layak dan berkualitas
+                                bagi anak-anak Indonesia.
+                            </p>
+                            <div class="program-bottom">
+                                <div class="campaign-count">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>5 Kampanye</span>
+                                </div>
+                                <a href="pendidikan.html">
+                                    <button>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="img/sosial.png" alt="Sosial">
+                        </div>
+                        <div class="program-info">
+                            <div class="program-top">
+                                <div class="program-icon">
+                                    <i class="fa-solid fa-hand-holding-heart"></i>
+                                </div>
+                                <h3>Sosial</h3>
+                            </div>
+                            <p>
+                                Bantuan darurat untuk korban bencana alam
+                                dan krisis kemanusiaan
+                            </p>
+                            <div class="program-bottom">
+                                <div class="campaign-count">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>5 Kampanye</span>
+                                </div>
+                                <a href="sosial.html">
+                                    <button>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="img/kesehatan.png" alt="Kesehatan">
+                        </div>
+                        <div class="program-info">
+                            <div class="program-top">
+                                <div class="program-icon">
+                                    <i class="fa-solid fa-kit-medical"></i>
+                                </div>
+                                <h3>Kesehatan</h3>
+                            </div>
+                            <p>
+                                Memberikan bantuan kesehatan untuk mereka
+                                yang membutuhkan.
+                            </p>
+                            <div class="program-bottom">
+                                <div class="campaign-count">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>5 Kampanye</span>
+                                </div>
+                                <a href="kesehatan.html">
+                                    <button>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="img/ekonomi.png" alt="Ekonomi">
+                        </div>
+                        <div class="program-info">
+                            <div class="program-top">
+                                <div class="program-icon">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <h3>Ekonomi</h3>
+                            </div>
+                            <p>
+                                Mendukung kemandirian ekonomi melalui
+                                bantuan modal.
+                            </p>
+                            <div class="program-bottom">
+                                <div class="campaign-count">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>5 Kampanye</span>
+                                </div>
+                                <a href="ekonomi.html">
+                                    <button>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="img/lingkungan.png" alt="Lingkungan">
+                        </div>
+                        <div class="program-info">
+                            <div class="program-top">
+                                <div class="program-icon">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <h3>Lingkungan</h3>
+                            </div>
+                            <p>
+                                Menjaga bumi kita melalui aksi nyata
+                                pelestarian lingkungan.
+                            </p>
+                            <div class="program-bottom">
+                                <div class="campaign-count">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>5 Kampanye</span>
+                                </div>
+                                <a href="lingkungan.html">
+                                    <button>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="program-card">
+                        <div class="program-image">
+                            <img src="img/agama.png" alt="Agama">
+                        </div>
+                        <div class="program-info">
+                            <div class="program-top">
+                                <div class="program-icon">
+                                    <i class="fa-solid fa-hands-praying"></i>
+                                </div>
+                                <h3>Agama</h3>
+                            </div>
+                            <p>
+                                Mendukung keagamaan dan pembangunan
+                                tempat ibadah untuk umat beragama.
+                            </p>
+                            <div class="program-bottom">
+                                <div class="campaign-count">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>5 Kampanye</span>
+                                </div>
+                                <a href="agama.html">
+                                    <button>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- LOGOUT MODAL -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-box">
+            <div class="logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2>Yakin Ingin Keluar?</h2>
+            <p>
+                Anda akan keluar dari sistem dan harus login kembali
+                untuk mengakses.
+            </p>
+            <div class="logout-actions">
+                <button class="btn-cancel" id="closeLogout">
+                    Batal
+                </button>
+                <button class="btn-logout" id="logoutBtn">
+                    Keluar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/global.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Lupa Password</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/forgot.css">
+    <link rel="stylesheet" href="css/globalakun.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-side">
+            <img src="img/logingambar.png" alt="Forgot Password">
+            <div class="overlay"></div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+            <div class="login-card">
+
+                <!-- LOGO -->
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo">
+                </div>
+
+                <!-- TITLE -->
+                <h2 class="logo-text">
+                    <span class="bold">Donasi</span><span class="regular">ku</span>
+                </h2>
+
+                <!-- WELCOME -->
+                <div class="welcome">
+                    <h1>Ganti Password</h1>
+                </div>
+
+                <!-- FORM -->
+                <form id="forgotForm">
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+                        <label>Email atau Nomor HP</label>
+                        <div class="input-box">
+                            <input type="text" id="email" placeholder="Masukkan email atau nomor HP">
+                        </div>
+                    </div>
+
+                    <!-- OTP -->
+                    <div class="form-group">
+                        <div class="otp-header">
+                            <label>Verifikasi Kode</label>
+                            <p>
+                                <a href="#">Kirim Kode</a>
+                            </p>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="email" placeholder="Masukkan kode verifikasi">
+                        </div>
+
+                        <!-- PASSWORD BARU -->
+                        <div class="form-group">
+                            <div class="otp-header">
+                                <label>Password Baru</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" id="otp" placeholder="Masukkan password baru">
+                                <span class="toggle-password" id="toggleOtp">
+                                    <i class="fa-regular fa-eye"></i>
+                                </span>
+                            </div>
+
+                            <!-- BUTTON -->
+                            <button type="submit" class="btn-reset" onclick="window.location.href='login.html'">
+                                Reset Password
+                            </button>
+
+                            <!-- SIGN UP -->
+                            <div class="signup">
+                                <span>Belum punya akun?</span>
+                                <a href="registerPage.html">
+                                    Daftar sekarang
+                                </a>
+                            </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi Saya</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/donasisaya.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+                <h2>Donasiku</h2>
+            </div>
+            <div class="menu-wrapper">
+                <h4>JELAJAHI</h4>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Beranda</span>
+                </a>
+                <a href="kampanye.html">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Kampanye</span>
+                </a>
+                <a href="program.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Program</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>DONASI SAYA</h4>
+                <a href="donasisaya.html" class="active">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Donasi Saya</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>TRANSPARANSI</h4>
+                <a href="report.html">
+                    <i class="fa-regular fa-rectangle-list"></i>
+                    <span>Laporan</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>TENTANG KAMI</h4>
+                <a href="aboutafter.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Tentang Kami</span>
+                </a>
+                <a href="setting.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" id="openLogout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+
+                <!-- SEARCH -->
+                <div class="search-box">
+                    <input type="text" placeholder="Cari kampanye, program, atau berita">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="topbar-right">
+
+                    <!-- NOTIF -->
+                    <div class="notif">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+
+                    <!-- PROFILE -->
+                    <div class="profile">
+                        <img src="img/Profile.png" alt="Profile">
+                        <div class="profile-text">
+                            <h3>Halo, Mahi</h3>
+                            <p>
+                                Terima kasih sudah berbagi!
+                            </p>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <!-- TITLE -->
+                <div class="page-title">
+                    <h1>Donasi Saya</h1>
+                    <p>
+                        Lihat semua donasi yang telah Anda berikan
+                        untuk berbagai kampanye kebaikan.
+                    </p>
+                </div>
+
+                <!-- STATS -->
+                <div class="stats-grid">
+
+                    <!-- CARD -->
+                    <div class="stats-card">
+                        <div class="stats-icon green">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div>
+                            <p>Total Donasi</p>
+                            <h3>Rp 2.500.000</h3>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="stats-card">
+                        <div class="stats-icon blue">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <div>
+                            <p>Kampanye Didukung</p>
+                            <h3>12 Kampanye</h3>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="stats-card">
+                        <div class="stats-icon yellow">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <div>
+                            <p>Donasi Bulan Ini</p>
+                            <h3>Rp 200.000</h3>
+                        </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="stats-card">
+                        <div class="stats-icon lightgreen">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <div>
+                            <p>Penerima Manfaat</p>
+                            <h3>74 Orang</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABLE -->
+                <div class="donation-table">
+
+                    <!-- HEADER -->
+                    <div class="table-header">
+                        <div>KAMPANYE</div>
+                        <div>TANGGAL</div>
+                        <div>NOMINAL</div>
+                        <div>STATUS</div>
+                        <div></div>
+                    </div>
+
+                    <!-- SCROLL AREA -->
+                    <div class="table-scroll">
+
+                        <!-- ROW 1 -->
+                        <div class="donation-row">
+                            <div class="campaign-info">
+                                <img src="img/donasisaya1.png" alt="Kampanye">
+                                <div>
+                                    <h4>
+                                        Bantuan Banjir Sumatra Barat
+                                    </h4>
+                                    <span class="badge green-badge">
+                                        Kesehatan
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="date-info">
+                                <h4>10 Mei 2026</h4>
+                                <p>10:30 WIB</p>
+                            </div>
+                            <div class="nominal-info">
+                                <h4>Rp 200.000</h4>
+                                <p>Transfer Bank</p>
+                            </div>
+                            <div class="status">
+                                <i class="fa-regular fa-circle-check"></i>
+                                Berhasil
+                            </div>
+                            <div class="action">
+                                <button class="detail-btn">
+                                    Lihat Detail
+                                </button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <!-- ROW 2 -->
+                        <div class="donation-row">
+                            <div class="campaign-info">
+                                <img src="img/donasisaya2.png" alt="Kampanye">
+                                <div>
+                                    <h4>
+                                        Selimut Untuk Korban Bencana
+                                    </h4>
+                                    <span class="badge gray-badge">
+                                        Sosial
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="date-info">
+                                <h4>09 Mei 2026</h4>
+                                <p>12:15 WIB</p>
+                            </div>
+                            <div class="nominal-info">
+                                <h4>Rp 150.000</h4>
+                                <p>E-Wallet</p>
+                            </div>
+                            <div class="status">
+                                <i class="fa-regular fa-circle-check"></i>
+                                Berhasil
+                            </div>
+                            <div class="action">
+                                <button class="detail-btn">
+                                    Lihat Detail
+                                </button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <!-- ROW 3 -->
+                        <div class="donation-row">
+                            <div class="campaign-info">
+                                <img src="img/donasisaya3.png" alt="Kampanye">
+                                <div>
+                                    <h4>
+                                        Pendidikan Untuk Anak Desa
+                                    </h4>
+                                    <span class="badge blue-badge">
+                                        Pendidikan
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="date-info">
+                                <h4>08 Mei 2026</h4>
+                                <p>09:00 WIB</p>
+                            </div>
+                            <div class="nominal-info">
+                                <h4>Rp 300.000</h4>
+                                <p>Transfer Bank</p>
+                            </div>
+                            <div class="status">
+                                <i class="fa-regular fa-circle-check"></i>
+                                Berhasil
+                            </div>
+                            <div class="action">
+                                <button class="detail-btn">
+                                    Lihat Detail
+                                </button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <!-- ROW 4 -->
+                        <div class="donation-row">
+                            <div class="campaign-info">
+                                <img src="img/donasisaya4.png" alt="Kampanye">
+                                <div>
+                                    <h4>
+                                        Donasi Lingkungan Hijau
+                                    </h4>
+                                    <span class="badge green-badge">
+                                        Lingkungan
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="date-info">
+                                <h4>07 Mei 2026</h4>
+                                <p>15:30 WIB</p>
+                            </div>
+                            <div class="nominal-info">
+                                <h4>Rp 100.000</h4>
+                                <p>Transfer Bank</p>
+                            </div>
+                            <div class="status">
+                                <i class="fa-regular fa-circle-check"></i>
+                                Berhasil
+                            </div>
+                            <div class="action">
+                                <button class="detail-btn">
+                                    Lihat Detail
+                                </button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <!-- ROW 5 -->
+                        <div class="donation-row">
+                            <div class="campaign-info">
+                                <img src="img/donasisaya5.png" alt="Kampanye">
+                                <div>
+                                    <h4>
+                                        Bantuan UMKM Desa
+                                    </h4>
+                                    <span class="badge yellow-badge">
+                                        Ekonomi
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="date-info">
+                                <h4>06 Mei 2026</h4>
+                                <p>18:20 WIB</p>
+
+                            </div>
+                            <div class="nominal-info">
+                                <h4>Rp 250.000</h4>
+                                <p>E-Wallet</p>
+                            </div>
+                            <div class="status">
+                                <i class="fa-regular fa-circle-check"></i>
+                                Berhasil
+                            </div>
+                            <div class="action">
+                                <button class="detail-btn">
+                                    Lihat Detail
+                                </button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <!-- ROW 6 -->
+                        <div class="donation-row">
+                            <div class="campaign-info">
+                                <img src="img/donasisaya1.png" alt="Kampanye">
+                                <div>
+                                    <h4>
+                                        Bantuan Banjir Sumatra Barat
+                                    </h4>
+                                    <span class="badge green-badge">
+                                        Kesehatan
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="date-info">
+                                <h4>05 Mei 2026</h4>
+                                <p>08:40 WIB</p>
+                            </div>
+                            <div class="nominal-info">
+                                <h4>Rp 175.000</h4>
+                                <p>Transfer Bank</p>
+                            </div>
+                            <div class="status">
+                                <i class="fa-regular fa-circle-check"></i>
+                                Berhasil
+                            </div>
+                            <div class="action">
+                                <button class="detail-btn">
+                                    Lihat Detail
+                                </button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- LOGOUT MODAL -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-box">
+            <div class="logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2>Yakin Ingin Keluar?</h2>
+            <p>
+                Anda akan keluar dari sistem dan harus login kembali
+                untuk mengakses.
+            </p>
+            <div class="logout-actions">
+                <button class="btn-cancel" id="closeLogout">
+                    Batal
+                </button>
+                <button class="btn-logout" id="logoutBtn">
+                    Keluar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>

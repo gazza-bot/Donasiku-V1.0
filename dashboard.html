@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Donasiku</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+                <h2>Donasiku</h2>
+            </div>
+            <div class="menu-wrapper">
+                <h4>JELAJAHI</h4>
+                <a href="dashboard.html" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Beranda</span>
+                </a>
+                <a href="kampanye.html">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Kampanye</span>
+                </a>
+                <a href="program.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Program</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>DONASI SAYA</h4>
+                <a href="donasisaya.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Donasi Saya</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>TRANSPARANSI</h4>
+                <a href="report.html">
+                    <i class="fa-regular fa-rectangle-list"></i>
+                    <span>Laporan</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>TENTANG KAMI</h4>
+                <a href="aboutafter.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Tentang Kami</span>
+                </a>
+                <a href="setting.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" id="openLogout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+            <!-- TOPBAR -->
+            <div class="topbar">
+                <div class="search-box">
+                    <input type="text" placeholder="Cari kampanye, program, atau berita">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="topbar-right">
+                    <div class="notif">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="profile">
+                        <img src="img/Profile.png" alt="Profile">
+                        <div class="profile-text">
+                            <h3>Halo, Mahi</h3>
+                            <p>
+                                Terima kasih sudah berbagi!
+                            </p>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DASHBOARD GRID -->
+            <div class="dashboard-grid">
+
+                <!-- LEFT -->
+                <div class="left-content">
+
+                    <!-- HERO -->
+                    <section class="hero-section">
+                        <div class="hero-card">
+                            <div class="hero-slider">
+
+                                <!-- SLIDE 1 -->
+                                <div class="hero-slide">
+                                    <div class="hero-content">
+                                        <h1>
+                                            Kembalikan Senyum Anak-Anak
+                                            <span>Indonesia</span>
+                                        </h1>
+                                        <p>
+                                            Donasi Kecilmu sangat berharga.
+                                        </p>
+                                    </div>
+                                    <div class="hero-brush"></div>
+                                    <img src="img/hero1.png" alt="Hero" class="hero-img">
+                                </div>
+
+                                <!-- SLIDE 2 -->
+                                <div class="hero-slide">
+                                    <div class="hero-content">
+                                        <h1>
+                                            Bantu Kesembuhan
+                                            <span>Adik Lisa</span>
+                                        </h1>
+                                        <p>
+                                            Donasi kecilmu sangat berarti.
+                                        </p>
+                                    </div>
+                                    <div class="hero-brush"></div>
+                                    <img src="img/hero3.png" alt="Hero" class="hero-img">
+                                </div>
+
+                                <!-- SLIDE 3 -->
+                                <div class="hero-slide">
+                                    <div class="hero-content">
+                                        <h1>
+                                            Selamatkan
+                                            <span>Lingkungan</span>
+                                        </h1>
+                                        <p>
+                                            Donasi kecilmu membantu bumi lebih baik.
+                                        </p>
+                                    </div>
+                                    <div class="hero-brush"></div>
+                                    <img src="img/hero4.png" alt="Hero" class="hero-img">
+                                </div>
+                            </div>
+
+                            <!-- DOTS -->
+                            <div class="slider-dots">
+                                <span class="dot active-dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CAMPAIGN -->
+                    <section class="campaign-section">
+                        <div class="section-header">
+                            <h2>Kampanye Pilihan</h2>
+                            <a href="kampanye.html">
+                                Lihat semua kampanye
+                            </a>
+                        </div>
+
+                        <!-- CARDS -->
+                        <div class="campaigns">
+
+                            <!-- CARD -->
+                            <div class="campaign-card">
+                                <img src="img/dashboard1.png" alt="Kampanye">
+                                <div class="campaign-content">
+                                    <span class="tag orange">
+                                        Ekonomi
+                                    </span>
+                                    <h3>
+                                        Gerobak Baru untuk Pak Udin
+                                    </h3>
+                                    <p class="collected">
+                                        Rp 60.000.000 terkumpul
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar orange-bar" style="width:60%">
+                                        </div>
+                                    </div>
+                                    <div class="percent">
+                                        60%
+                                    </div>
+                                    <button class="btn btn-primary donate-btn">
+                                        Donasi Sekarang
+                                    </button>
+                                    <button class="btn btn-outline detail-btn">
+                                        Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="campaign-card">
+                                <img src="img/dashboard2.png" alt="Kampanye">
+                                <div class="campaign-content">
+                                    <span class="tag red">
+                                        Kesehatan
+                                    </span>
+                                    <h3>
+                                        Operasi Jantung untuk Dito
+                                    </h3>
+                                    <p>
+                                        Rp 80.000.000 terkumpul
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar red-bar"></div>
+                                    </div>
+                                    <div class="percent">
+                                        80%
+                                    </div>
+                                    <button class="btn btn-primary donate-btn">
+                                        Donasi Sekarang
+                                    </button>
+                                    <button class="btn btn-outline detail-btn">
+                                        Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="campaign-card">
+                                <img src="img/dashboard3.png" alt="Kampanye">
+                                <div class="campaign-content">
+                                    <span class="tag purple">
+                                        Kemanusiaan
+                                    </span>
+                                    <h3>
+                                        Selimut Hangat untuk Pengungsi
+                                    </h3>
+                                    <p>
+                                        Rp 20.000.000 terkumpul
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar purple-bar"></div>
+                                    </div>
+                                    <div class="percent">
+                                        20%
+                                    </div>
+                                    <button class="btn btn-primary donate-btn">
+                                        Donasi Sekarang
+                                    </button>
+                                    <button class="btn btn-outline detail-btn">
+                                        Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="campaign-card">
+                                <img src="img/dashboard4.png" alt="Kampanye">
+                                <div class="campaign-content">
+                                    <span class="tag purple">
+                                        Kemanusiaan
+                                    </span>
+                                    <h3>
+                                        Selimut Hangat untuk Pengungsi
+                                    </h3>
+                                    <p>
+                                        Rp 20.000.000 terkumpul
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar purple-bar"></div>
+                                    </div>
+                                    <div class="percent">
+                                        20%
+                                    </div>
+                                    <button class="btn btn-primary donate-btn">
+                                        Donasi Sekarang
+                                    </button>
+                                    <button class="btn btn-outline detail-btn">
+                                        Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="campaign-card">
+                                <img src="img/dashboard5.png" alt="Kampanye">
+                                <div class="campaign-content">
+                                    <span class="tag purple">
+                                        Kemanusiaan
+                                    </span>
+                                    <h3>
+                                        Selimut Hangat untuk Pengungsi
+                                    </h3>
+                                    <p>
+                                        Rp 20.000.000 terkumpul
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar purple-bar"></div>
+                                    </div>
+                                    <div class="percent">
+                                        20%
+                                    </div>
+                                    <button class="btn btn-primary donate-btn">
+                                        Donasi Sekarang
+                                    </button>
+                                    <button class="btn btn-outline detail-btn">
+                                        Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- CARD -->
+                            <div class="campaign-card">
+                                <img src="img/dashboard6.png" alt="Kampanye">
+                                <div class="campaign-content">
+                                    <span class="tag blue">
+                                        Pendidikan
+                                    </span>
+                                    <h3>
+                                        Pendidikan Layak Untuk Anak Desa
+                                    </h3>
+                                    <p>
+                                        Rp 90.000.000 terkumpul
+                                    </p>
+                                    <div class="progress">
+                                        <div class="progress-bar blue-bar"></div>
+                                    </div>
+                                    <div class="percent">
+                                        90%
+                                    </div>
+                                    <button class="btn btn-primary donate-btn">
+                                        Donasi Sekarang
+                                    </button>
+                                    <button class="btn btn-outline detail-btn">
+                                        Lihat Detail
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="right-side">
+
+                    <!-- SUMMARY -->
+                    <div class="summary-card">
+                        <h3>Ringkasan Kebaikanmu</h3>
+                        <div class="summary-item">
+                            <div class="summary-icon green">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <div>
+                                <p>Total Donasi</p>
+                                <h4>Rp 2.500.000</h4>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon yellow">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <div>
+                                <p>Donasi Anda Bulan Ini</p>
+                                <h4>Rp 200.000</h4>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon gray">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <div>
+                                <p>Kampanye yang Anda bantu</p>
+                                <h4>20 Kampanye</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ACTIVITY -->
+                    <div class="activity-card">
+                        <div class="activity-header">
+                            <h3>Aktivitas Terbaru</h3>
+                            <a href="donasisaya.html">
+                                Lihat semua
+                            </a>
+                        </div>
+                        <div class="activity-list">
+
+                            <!-- ITEM -->
+                            <div class="activity-item">
+                                <div class="activity-icon blue">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <h4>Bantu Pendidikan Anak</h4>
+                                    <span>Rp 150.000</span>
+                                    <p>3 Mei 2026 13:17</p>
+                                </div>
+                            </div>
+
+                            <!-- ITEM -->
+                            <div class="activity-item">
+                                <div class="activity-icon red">
+                                    <i class="fa-solid fa-kit-medical"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <h4>Donasi Kanker Ibu Arni</h4>
+                                    <span>Rp 50.000</span>
+                                    <p>2 Mei 2026 10:12</p>
+                                </div>
+                            </div>
+
+                            <!-- ITEM -->
+                            <div class="activity-item">
+                                <div class="activity-icon yellow">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <div class="activity-info">
+                                    <h4>Bantu Perekonomian</h4>
+                                    <span>Rp 30.000</span>
+                                    <p>1 Mei 2026 10:12</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- LOGOUT MODAL -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-box">
+            <div class="logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2>Yakin Ingin Keluar?</h2>
+            <p>
+                Anda akan keluar dari sistem dan harus login kembali
+                untuk mengakses.
+            </p>
+            <div class="logout-actions">
+                <button class="btn-cancel" id="closeLogout">
+                    Batal
+                </button>
+                <button class="btn-logout" id="logoutBtn">
+                    Keluar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/dashboard.js"></script>
+    <script src="js/global.js"></script>
+</body>
+
+</html>

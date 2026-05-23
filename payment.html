@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+                <h2>Donasiku</h2>
+            </div>
+            <div class="menu-wrapper">
+                <h4>JELAJAHI</h4>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Beranda</span>
+                </a>
+                <a href="kampanye.html" class="active">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Kampanye</span>
+                </a>
+                <a href="program.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Program</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>DONASI SAYA</h4>
+                <a href="donasisaya.html">
+                    <i class="fa-regular fa-file-lines"></i>
+                    <span>Donasi Saya</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>TRANSPARANSI</h4>
+                <a href="report.html">
+                    <i class="fa-regular fa-rectangle-list"></i>
+                    <span>Laporan</span>
+                </a>
+            </div>
+            <div class="menu-wrapper">
+                <h4>TENTANG KAMI</h4>
+                <a href="aboutafter.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Tentang Kami</span>
+                </a>
+                <a href="setting.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Pengaturan</span>
+                </a>
+                <a href="#" id="openLogout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <span>Keluar</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- TOPBAR -->
+            <div class="topbar">
+                <div class="search-box">
+                    <input type="text" placeholder="Cari kampanye, program, atau berita">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="topbar-right">
+                    <div class="notif">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                    <div class="profile">
+                        <img src="img/Profile.png" alt="Profile">
+                        <div class="profile-text">
+                            <h3>Halo, Mahi</h3>
+                            <p>
+                                Terima kasih sudah berbagi!
+                            </p>
+                        </div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAYMENT PAGE -->
+            <div class="payment-detail-page">
+
+                <!-- LEFT -->
+                <div class="payment-left">
+
+                    <!-- DETAIL CAMPAIGN -->
+                    <div class="payment-card">
+                        <h2>Detail Campaign</h2>
+                        <div class="payment-campaign-info">
+                            <img src="" id="paymentImage" alt="Campaign">
+                            <div class="campaign-detail-text">
+                                <span id="paymentCategory" class="payment-detail-badge">
+                                </span>
+                                <h3 id="paymentTitle">
+                                </h3>
+                                <h4 id="paymentCollected">
+                                </h4>
+                                <div class="progress-bar">
+                                    <div class="progress" id="paymentProgress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NOMINAL -->
+                    <div class="payment-card">
+                        <h2>Nominal Donasi</h2>
+                        <input type="number" id="paymentInput" placeholder="Masukkan nominal">
+                        <div class="quick-payment">
+                            <button class="quick-btn" data-amount="10000">
+                                Rp 10K
+                            </button>
+                            <button class="quick-btn" data-amount="50000">
+                                Rp 50K
+                            </button>
+                            <button class="quick-btn" data-amount="100000">
+                                Rp 100K
+                            </button>
+                            <button class="quick-btn" data-amount="200000">
+                                Rp 200K
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- METHOD -->
+                    <div class="payment-card">
+                        <h2>Metode Pembayaran</h2>
+                        <div class="payment-method-grid">
+                            <div class="payment-method active">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <span>Transfer</span>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fa-solid fa-wallet"></i>
+                                <span>E-Wallet</span>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fa-solid fa-qrcode"></i>
+                                <span>QRIS</span>
+                            </div>
+                            <div class="payment-method">
+                                <i class="fa-regular fa-credit-card"></i>
+                                <span>Kartu</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="payment-right">
+                    <div class="summary-card">
+                        <h2>Ringkasan</h2>
+                        <div class="summary-item">
+                            <span>Nominal</span>
+                            <strong id="summaryNominal">
+                                Rp 0
+                            </strong>
+                        </div>
+                        <div class="summary-item">
+                            <span>Biaya Admin</span>
+                            <strong>
+                                Rp 1.000
+                            </strong>
+                        </div>
+                        <div class="summary-item total-summary">
+                            <span>Total Bayar</span>
+                            <strong id="summaryTotal">
+                                Rp 1.000
+                            </strong>
+                        </div>
+                        <button class="pay-btn">
+                            Bayar Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- LOGOUT MODAL -->
+    <div class="logout-modal" id="logoutModal">
+        <div class="logout-box">
+            <div class="logout-icon">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+            <h2>Yakin Ingin Keluar?</h2>
+            <p>
+                Anda akan keluar dari sistem dan harus login kembali
+                untuk mengakses.
+            </p>
+            <div class="logout-actions">
+                <button class="btn-cancel" id="closeLogout">
+                    Batal
+                </button>
+                <button class="btn-logout" id="logoutBtn">
+                    Keluar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/payment.js"></script>
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>
