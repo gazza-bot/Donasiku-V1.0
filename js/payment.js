@@ -101,6 +101,8 @@ if (paymentProgressEl && campaignProgress) {
     paymentProgressEl.style.width =
         campaignProgress;
 
+    console.log("Progress Ditemukan : " + campaignProgress)
+
 }
 
 
