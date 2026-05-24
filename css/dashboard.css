@@ -508,6 +508,10 @@
 }
 
 /* title */
+.section-title {
+    margin-top: 1rem;
+}
+
 .section-title h2 {
     font-size: 30px;
     font-weight: 700;
