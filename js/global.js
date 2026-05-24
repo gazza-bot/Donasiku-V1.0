@@ -45,7 +45,7 @@ if (logoutModal) {
 if (logoutBtn) {
     logoutBtn.addEventListener("click", function () {
         alert("Berhasil logout!");
-        window.location.href = "beforelogin.html";
+        window.location.href = "index.html";
     });
 }
 
