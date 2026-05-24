@@ -74,3 +74,7 @@ if (forgotForm) {
         alert('Password berhasil direset!');
     });
 }
+
+function navigateTologin(){
+    window.location.href = 'login.html'
+}
