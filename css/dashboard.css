@@ -69,6 +69,7 @@
 
 /* slider */
 .hero-slide {
+    background: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -115,30 +116,30 @@
 /* image */
 .hero-img {
     position: absolute;
-    right: 0;
     top: 0;
-    width: 55%;
+    right: 0;
+    width: 58%;
     height: 100%;
     object-fit: cover;
+    filter:brightness(0.95);
 }
 
 /* brush */
 .hero-brush {
     position: absolute;
-    top: -20px;
-    right: 36%;
-    width: 180px;
-    height: 160%;
+    inset: 0;
     z-index: 2;
     pointer-events: none;
-    background: linear-gradient(to right,
-            rgba(255, 255, 255, 0.98) 15%,
-            rgba(255, 255, 255, 0.95) 20%,
-            rgba(255, 255, 255, 0.82) 45%,
-            rgba(255, 255, 255, 0.45) 70%,
-            rgba(255, 255, 255, 0.12) 90%,
-            rgba(255, 255, 255, 0) 100%);
-    filter: blur(0px);
+
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,1) 40%,
+        rgba(255,255,255,0.95) 58%,
+        rgba(255,255,255,0.65) 60%,
+        rgba(255,255,255,0.25) 68%,
+        rgba(255,255,255,0) 78%
+    );
 }
 
 /* dots */
