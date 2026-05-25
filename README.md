@@ -1,3 +1,5 @@
+<div style="background-color: white;"><img src="img/logo.png"/></div>
+
 # Donasiku 🤝
 
 Donasiku adalah platform berbasis web (Frontend) yang dirancang untuk memfasilitasi penggalangan dana dan donasi secara online. Platform ini menyediakan antarmuka yang intuitif bagi para donatur untuk menjelajahi berbagai kampanye sosial, kemanusiaan, lingkungan, keagamaan, serta memantau transparansi laporan dana yang disalurkan.
